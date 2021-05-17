@@ -1,0 +1,67 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 2px rgba(0, 0, 0, .25);
+}
+
+canvas
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+h1
+{
+	font-size: 3rem;
+	font-weight: 700;
+	letter-spacing: .5rem;
+	z-index: 1;
+	//300 400 500 600 700 800 900
+}
+
+ul
+{
+	display: flex;
+	margin-top: .25rem;
+	list-style: none;
+	z-index: 1;
+}
+
+ul > li
+{
+	margin: 0 .5rem;
+}
+
+ul > li > a
+{
+	color: inherit;
+	font-size: .75rem;
+	letter-spacing: .125rem;
+	text-decoration: none;
+}
+
+ul > li > a:hover
+{
+	text-decoration: underline;
+}

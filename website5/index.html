@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+		<link rel='stylesheet' type='text/css' href='main.min.css' />
+		<title>ryanstew.art</title>
+	</head>
+	<body>
+		<div class='input-row'>
+			<h1>Starting Color:</h1>
+			<input id='color-input' type='color' value='#FF0000' />
+		</div>
+
+		<div class='input-row'>
+			<h1>Number of Colors:</h1>
+			<input id='numcolors-input' type='number' value='6' min='1'/>
+		</div>
+
+		<div class='input-row'>
+			<h1>Range %:</h1>
+			<input id='range-input' type='number' value='50' min='0' max='100' />
+		</div>
+
+		<div class='section'>
+			<h2>Monochromatic</h2>
+			<div id='monochromatic' class='color-row'></div>
+		</div>
+
+		<div class='section'>
+			<h2>Analogous</h2>
+			<div id='analogous' class='color-row'></div>
+		</div>
+
+		<div class='section'>
+			<h2>Complementary</h2>
+			<div id='complement' class='color-row'></div>
+		</div>
+
+		<div class='section'>
+			<h2>Split Complementary</h2>
+			<div id='splitcomplementary' class='color-row'></div>
+		</div>
+
+		<div class='section'>
+			<h2>Triadic</h2>
+			<div id='triadic' class='color-row'></div>
+		</div>
+
+		<div class='section'>
+			<h2>Tetradic</h2>
+			<div id='tetradic' class='color-row'></div>
+		</div>
+
+		<script src='color.js'></script>
+		<script src='main.js'></script>
+	</body>
+</html>

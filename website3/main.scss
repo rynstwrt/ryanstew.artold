@@ -1,0 +1,95 @@
+$color1: #1C1C1C;
+$color2: white;
+$color3: rgb(255, 197, 142);
+
+$blockSize: 58px;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background-image: url('assets/backgroundColorGrass.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#cloud
+{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    top: 5%;
+    right: 5%;
+
+    background-image: url('assets/cloud.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#main
+{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    #char
+    {
+        width: $blockSize;
+        height: $blockSize;
+        position: relative;
+        bottom: 0;
+
+        background-image: url('assets/char.png');
+        background-size: cover;
+        transform-origin: bottom;
+
+        $timeAndFunction: .05s ease-in-out;
+        transition: bottom $timeAndFunction, transform $timeAndFunction;
+    }
+
+    .block
+    {
+        background-color: blue;
+        width: $blockSize;
+        height: $blockSize;
+        position: absolute;
+        bottom: $blockSize + 1;
+        left: calc(50% - 2 * #{$blockSize});
+        visibility: hidden;
+    }
+}
+
+#ground
+{
+    $height: 30%;
+
+    width: 100%;
+    height: $height;
+    background-image: url('assets/dirt.png');
+    background-size: $blockSize;
+
+    #firstrow
+    {
+        height: $blockSize;
+        background-image: url('assets/grass.png');
+        background-size: $blockSize;
+    }
+}

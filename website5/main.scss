@@ -1,0 +1,113 @@
+$color1: #1D2023;
+$color2: white;
+$color3: #ffa583;
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	background-color: $color1;
+	color: $color2;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10% 0;
+}
+
+.input-row
+{
+	display: flex;
+	position: relative;
+	margin: 2rem 0;
+
+	h1
+	{
+		white-space: pre;
+		padding-right: 5%;
+		letter-spacing: .25rem;
+	}
+
+	input
+	{
+		background-color: transparent;
+		color: $color2;
+		text-align: center;
+		font-size: 1rem;
+		border: 0;
+		border-bottom: 1px solid $color3;
+		width: 50px;
+		height: 30px;
+	}
+
+	&::after
+	{
+		content: '';
+		position: absolute;
+		width: 70%;
+		height: 150%;
+		background-color: $color3;
+		z-index: -1;
+		top: -30px;
+		left: -25px;
+		opacity: .5;
+	}
+}
+
+h2
+{
+	font-weight: normal;
+	font-size: 1.25rem;
+	text-align: left;
+}
+
+.section
+{
+	text-align: center;
+	margin: 2% 0;
+	padding: 3%;
+	background-color: transparentize($color3, .5);
+	border-radius: 10px;
+	box-shadow: 0 10px 10px transparentize(black, .6);
+}
+
+.color-row
+{
+	width: 70vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.color-box
+{
+	$size: 60px;
+	width: $size;
+	height: $size;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 3%;
+	padding: 1%;
+	border-radius: 10px;
+	box-shadow: 0 5px 10px transparentize(black, .6);
+
+	p
+	{
+		text-align: center;
+		font-size: 1rem;
+	}
+}

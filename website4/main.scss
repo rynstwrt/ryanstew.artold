@@ -1,0 +1,71 @@
+$color1: #1C1C1C;
+$color2: white;
+$color3: rgb(255, 197, 142);
+
+@keyframes blink { to { opacity: 0; } }
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background-color: $color1;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+h1
+{
+    color: $color2;
+    width: 100%;
+    font-size: 1.5rem;
+    white-space: pre-line;
+    position: relative;
+    z-index: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+#cursor
+{
+    background-color: $color3;
+    width: 1px;
+    height: 25px;
+    margin-left: 10px;
+    position: absolute;
+    animation: blink .5s infinite alternate;
+    z-index: 1;
+}
+
+#background
+{
+    position: absolute;
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    .line
+    {
+        background-color: $color3;
+        position: absolute;
+        height: 1px;
+        transform-origin: left center;
+        opacity: .3;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, .3);
+    }
+}

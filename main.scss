@@ -1,0 +1,203 @@
+$color1: #1D2023;
+$color2: white;
+$color3: #ffc8a6;
+
+:root
+{
+    --shape-size: 13px;
+    --shape-margin: 2px;
+}
+
+@font-face
+{
+    font-family: 'Space Grotesk';
+    src: url('SpaceGrotesk-VariableFont.ttf') format('truetype');
+    font-weight: 300 700;
+}
+
+@keyframes fadeIn
+{
+    100% { opacity: 1; }
+}
+
+@keyframes wave
+{
+    100% { transform: rotate(180deg); }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    background-color: $color1;
+    color: $color2;
+    padding-top: 25%;
+}
+
+#shape-container
+{
+    width: 60vmin;
+    height: 60vmin;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s .5s ease-out;
+    animation-fill-mode: forwards;
+
+    .shape
+    {
+        background-color: $color3;
+        width: 100%;
+        height: 2.5%;
+        margin: 5% 0;
+    }
+}
+
+#footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    line-height: 3rem;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+    h1
+    {
+        font-size: 3rem;
+        letter-spacing: .5rem;
+        position: relative;
+        margin-bottom: 1rem;
+
+        &::before
+        {
+            content: '';
+            background-color: $color2;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -.5rem;
+            left: 0;
+        }
+    }
+
+    h2
+    {
+        font-size: .75rem;
+        letter-spacing: .25rem;
+    }
+
+    #link-container
+    {
+        display: flex;
+        position: relative;
+        top: -1rem;
+
+        a
+        {
+            margin-right: 10%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: color .3s ease-in-out;
+
+            &:hover
+            {
+                color: $color3;
+            }
+        }
+    }
+
+    #website-link
+    {
+        color: white;
+        text-decoration: none;
+        font-size: .75rem;
+        letter-spacing: .2rem;
+        position: relative;
+        top: -1rem;
+        text-decoration: none;
+        transition: color .3s ease-in-out;
+
+        &:hover
+        {
+            color: $color3;
+        }
+    }
+}
+
+@media (min-width: 576px)
+{
+    body
+    {
+        padding-top: 10%;
+    }
+}
+
+@media (min-width: 768px)
+{
+    body
+    {
+        padding-top: 25%;
+    }
+
+    #shape-container
+    {
+        width: 50vmin;
+        height: 50vmin;
+    }
+
+    #footer
+    {
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+
+        h1
+        {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        h2
+        {
+            font-size: 1.25rem;
+        }
+
+        #link-container
+        {
+            font-size: 1.5rem;
+            a
+            {
+                margin-right: 7.5%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px)
+{
+    body
+    {
+        padding-top: 15%;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    body
+    {
+        padding-top: 10%;
+    }
+}
